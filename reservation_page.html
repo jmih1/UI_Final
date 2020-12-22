@@ -1,0 +1,260 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Reservation Page</title>
+  <meta name="description" content="Reservation page">
+  <meta name="author" content="Bennet Brown">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+ <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+		background: grey;
+	}
+	.screen{
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      width: 379px;
+      height: 668px;
+      border: 3px solid black;
+      background-color:#fff;   
+    }
+    .header{
+    	background-color: red;
+		position: relative;
+    	width: 100%;
+    	height: 49px;
+    	left: 0px;
+    	top: -1px;
+    	background: #9BCBEB;
+    	text-align: center;
+    	font-family: Roboto;
+    	font-style: normal;
+    	font-weight: bold;
+    	font-size: 24px;
+    	line-height: 28px;
+    	color: white;
+    	align-items: center;
+    }
+    .reservation{
+    	/* background-color: yellow; */
+    	height: 568px;
+    }
+
+    .reservation #dorm_display{
+    	/* background-color: red; */
+    	margin: 10px 0px 10px 0px;
+    	height: 40px;
+    	width: 100%;
+    }
+    .reservation #back {
+    	border-radius: 45%;
+		margin-left: 17px;
+		/* width: 49px;
+		height: 35px;
+		font-size: 26px;
+		background-color: #c4c4c4; */
+    }
+	#back_image {
+		width: 49px;
+		height: 30px;
+		border-radius: 45%;
+		background-color: #c4c4c4 ;
+
+	}
+
+
+    .reservation #dorm {
+    	margin-left: 67px;
+    	font-size: 30px;
+    	font-family: 'Roboto', sans-serif;
+
+    }
+  
+
+	.selected_machine {
+		margin-left: 17px;
+	}
+    .selected_machine #machine{
+    	height: 40px;
+    	width: 45px;
+    	font-size: 24px;
+    	font-family: 'Roboto', sans-serif;
+    	border: 2px solid black;
+		margin-left: 14px;
+    }
+    .selected_machine #text {
+    	font-size: 26px;
+    	font-family: 'Roboto', sans-serif;
+		
+    }
+    .choose_reservation #choose_display{
+    	width: 351px;
+    	height: 40px;
+		margin-top: 25px;
+		margin-bottom: 30px;
+		padding-left: 10px;
+    	/* background-color: green; */
+		text-align: center;
+		font-size: 24px;
+		font-family: 'Roboto', sans-serif;
+    }
+
+	.choose_reservation #reserve_now {
+		margin: 15px 50px 50px 100px;
+		/* background-color: green; */
+	}
+
+	.reserve_now {
+		margin-left: 97px;
+	}
+	#reserve_now_button {
+		width: 166px;
+		height: 43px;
+		background-color: #B6E4FD; 
+		border: none;
+		box-shadow: 0 4px #e4edf0;
+		font-family: 'Roboto', sans-serif;
+		font-size: 18px;
+	}
+
+	#reserve_now_left {
+		width: 166px;
+		height: 43px;
+		background-color: #B6E4FD;
+		margin-right: 10px;
+		margin-bottom: 14px;
+		border: none;
+		box-shadow: 0 4px #e4edf0;
+		font-family: 'Roboto', sans-serif;
+		font-size: 18px;
+
+	}
+
+	#reserve_now_right {
+		width: 166px;
+		height: 43px;
+		background-color: #B6E4FD;
+		border: none;
+		box-shadow: 0 4px #e4edf0;
+		font-family: 'Roboto', sans-serif;
+		font-size: 18px;
+
+	}
+	.confirm {
+		margin: 0px 20px 20px 20px;
+		/* background-color: blueviolet; */
+		margin-left: 97px;
+		
+	}
+	#confirm_button {
+		width: 192px;
+		height: 48px;
+		background-color: #0A69AE;
+		font-family: 'Roboto', sans-serif;
+		font-size: 32px;
+		color: white;
+		box-shadow: 0 4px whitesmoke;
+		border: none;
+	}
+
+	.time_block {
+		width: 368px;
+		height: auto;
+		/* border: 1px solid black; */
+		margin-bottom: 53px;
+		margin-left: 12px;
+	}
+
+	.nav-bar { 
+		display: flex; 
+		flex-direction: row; 
+		height: 56px; 
+		position: absolute; 
+		bottom: 0%; 
+		} 
+	.nav-tab { 
+		width: 55px; 
+		padding-left: 35px; 
+		padding-right: 35px; 
+		padding-top:4px; 
+		padding-bottom: 4px; 
+		text-align: center; 
+		border-top: 3.5px solid #D8D8D8; 
+		} 
+	.nav-tab-selected { 
+		background-color: #D8D8D8; 
+		border-top: 3.5px solid black; 
+		}
+ 	a { 
+		 color: black; 
+		 text-decoration: none; 
+		 }
+
+
+
+
+</style>
+
+</head>
+
+<body>
+
+<div class="iphone-frame">
+	<div class="screen">
+		<div class="header">
+			Laundry@CU
+		</div>
+		<div class="reservation">
+			<div id="dorm_display">
+				<span id="back_button">
+					<button type="button" id="back"><img id="back_image" src="back-arrow.png" alt="Italian Trulli"></button>
+				</span>
+				<span id="dorm">Wallach</span>
+			</div>
+			<div class="selected_machine">
+				<span id='text'>Selected Machine: </span>
+				<span id='machine'>W1</span>
+			</div>
+			<div class="choose_reservation">
+				<div id="choose_display">
+					Choose Reservation Period
+				</div>
+				
+				<div id="reserve_now">
+					<button type="button" id="reserve_now_button">9:42 : 10:42</button>
+				</div>
+			</div>
+			<div class="time_block">
+				<span><button type="button" id="reserve_now_left">9:42 : 10:42</button></span>&nbsp &nbsp <span><button type="button" id="reserve_now_right">9:42 : 10:42</button></span>
+				<span><button type="button" id="reserve_now_left">9:42 : 10:42</button></span>&nbsp &nbsp <span><button type="button" id="reserve_now_right">9:42 : 10:42</button></span>
+				<span><button type="button" id="reserve_now_left">9:42 : 10:42</button></span>&nbsp &nbsp <span><button type="button" id="reserve_now_right">9:42 : 10:42</button></span>
+			</div>
+			
+			<div class="confirm">
+				<button type="button" id="confirm_button">CONFIRM</button>
+			</div>
+		</div>
+		<div class="nav-bar">
+			<a href="feed.html">  <div class="nav-tab nav-tab-selected">
+					<img id="feed" src="images/bell.jpg" alt="bell"/>
+					<div class="caption">Feed</div>
+				</div> </a>
+			<a href="http://google.com">  <div class="nav-tab">
+					<img id="laundry-view" src="images/laundry.jpg" alt="laundry"/>
+					<div class="caption">Laundry</div>
+				</div> </a>
+			<a href="http://bing.com"> <div class="nav-tab">
+					<img id="storage-view" src="images/user.jpg" alt="storage"/>
+					<div class="caption">Storage</div>
+				</div> </a>
+		</div>
+
+	</div>
+	
+</div>
+</body>
+</html>

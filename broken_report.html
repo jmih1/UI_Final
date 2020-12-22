@@ -1,0 +1,147 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Broken Report Page</title>
+  <meta name="description" content="Broken Report Page">
+  <meta name="author" content="Bennet Brown">
+
+<!--   <link rel="stylesheet" href="css/broken_report.css"> -->
+ <style>
+ 	.frame {
+      background-color: white;
+      position: fixed;
+      top: 50%;
+      left:50%;
+      height: 248px;
+      width: 355px;
+      border: 1px solid black; 
+      margin: 10px 10px 10px 10px;
+     /* padding: 10px 10px 10px 10px; */
+      transform: translate(-50%, -50%);
+    }
+    .card {
+      height: 248px;
+      width: 355px;
+      border: 1px solid black;
+    }
+    .header {
+    	width: 351px;
+    	height: 27px;
+    	background-color: #689AE5;
+		margin-bottom: 14px;
+    }
+    #br_header {
+    	font-weight: bold;
+    	font-size: 24px;
+    	color: white;
+    }
+    .select_machine{
+    	/* background-color: red; */
+    	width: auto;
+    	height: auto;
+    	margin: 0px 5px 10px 14px;
+    	/* padding: 5px 5px 5px 5px; */
+    }
+	#machines {
+		width: 109px;
+		height: 27px;
+		margin-right: 25px;
+	}
+
+	#numbers {
+		width: 64px;
+		height: 27px;
+
+	}
+    .notes {
+    	width: auto;
+    	height: auto;
+    	/* background-color: green; */
+		font-size: 18px;
+		font-family: 'Roboto', 'sans-serif';
+    	margin:10px 10px 15px 14px;
+    	/* padding: 10px 10px 10px 10px; */
+    }
+	#details {
+		width: 305px;
+		height: 64px;
+		margin-left: 14px;
+		margin-bottom: 23px;
+		/* padding-top: 0px; */
+	}
+	
+	#buttons {
+		margin-left: 10px;
+	}
+	#canc {
+		margin-right: 161px;
+		width: 85px;
+		height: 33px;
+		background-color: #E7E3E3;
+		box-shadow: 0 4px whitesmoke;
+		border: none;
+	}
+
+	#sub{
+		width: 85px;
+		height: 33px;
+		background-color: #0A69AE;
+		font-size: 16px;
+		font-family: 'Roboto', sans-serif;
+		color: whitesmoke;
+		box-shadow: 0 4px whitesmoke;
+		border: none;
+	}
+
+ </style>
+</head>
+
+<body>
+   <div class="frame">
+	   <div class="card">
+		<div class="header">
+			<div id="br_header">
+				Broken Machine Report
+			</div>
+			
+		</div>
+		<div class="select_machine">
+		<span>
+				<select name="machines" id="machines">
+				  <option value="machine">Machine</option>
+				  <option value="dryer">Dryer</option>
+				  <option value="washer">Washer</option>
+				</select>		 
+		</span>
+		<span>
+				<select name="numbers" id="numbers">
+				  <option value="#">#</option>
+				  <option value="one">1</option>
+				  <option value="two">2</option>
+				  <option value="three">3</option>
+				  <option value="four">4</option>
+				</select>
+		</span>
+		</div>
+		<div class="notes">
+			Notes:
+		</div>
+		<div class="form_section">
+			<form action="/action_page.php">
+				<input type="text" name="details" id="details" placeholder="Describe Problem"><br>
+				<div id="buttons">
+					<input type="submit" value="Cancel" id="canc">
+				<input type="submit" value="Submit" id="sub">
+				</div>
+				
+			  </form>
+		</div>
+	   </div>
+	   
+   </div>
+ 
+</body>
+</html>
