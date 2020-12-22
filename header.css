@@ -1,0 +1,24 @@
+.screen{
+    position: absolute;
+    width: 375px;
+    height: 667px;
+    border: 1px solid black;
+    background-color:#fff;
+
+}
+.header{
+    position: relative;
+    width: 375px;
+    height: 49px;
+    left: 0px;
+    top: -1px;
+    background: #9BCBEB;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: white;
+    align-items: center; 
+}
