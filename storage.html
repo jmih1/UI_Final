@@ -307,7 +307,7 @@ div pa{
         <h2 text-align:center> Confirmation</h2>
         <p1>You have successfully moved the laundry from dryer #3 to locker #2 </p1>
         <hr color=#A3A5A7 SIZE=2>
-        <span class="close">OK</span>
+        <span class="close" onclick="pageRedirect()">OK</span>
 
       </div>
 
@@ -332,6 +332,10 @@ div pa{
 
 
 <script>
+
+function pageRedirect() {
+  window.location.replace("feed.html");
+}  
 // Get the modal
 var modal = document.getElementById("myModal");
 
@@ -348,7 +352,10 @@ btn.onclick = function() {
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
-  modal.style.display = "none";
+  // modal.style.display = "none";
+  window.location.replace("feed.html");
+
+
 }
 
 // When the user clicks anywhere outside of the modal, close it
