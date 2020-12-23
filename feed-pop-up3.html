@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>.screen { margin-left: auto; margin-right: auto; position: relative; width: 375px; height: 667px; border: 3px solid black; background-color: #fff; } .nav-bar { display: flex; flex-direction: row; height: 56px; position: absolute; bottom: 0; } .nav-tab { width: 55px; padding-left: 35px; padding-right: 35px; padding-top: 4px; padding-bottom: 4px; text-align: center; border-top: 3.5px solid #D8D8D8; } .nav-tab-selected { background-color: #D8D8D8; border-top: 3.5px solid black; } a { color: black; text-decoration: none; } .header-text { text-align: center; margin-top: 20px; font-size: 20px; } .box { border: 2px solid black; width: 292px; position: relative; margin: 0 auto; text-align: center; margin-top: 35px; border-radius: 3px; } .box-header { border-bottom: 2px solid black; width: 292px; position: relative; margin: 0 auto; margin-bottom: 15px; padding-top: 10px; padding-bottom: 10px; font-size: 20px; } .machine { padding-bottom: 15px; font-size: 20px; color: #78BACE; text-decoration: underline; } .no-res { padding-bottom: 15px; font-size: 20px; color: #767676; } .header { position: relative; width: 375px; height: 37px; left: 0px; top: -1px; background: #9BCBEB; text-align: center; font-family: Roboto; font-style: normal; font-weight: bold; font-size: 24px; line-height: 28px; color: white; align-items: center; padding-top: 12px; } .frame { position: absolute; top: 300px; left: 178px; z-index: 10; background-color: white; height: 200px; width: 350px; border: 3px solid black; margin: 10px 10px 10px 10px; border-radius: 3px; transform: translate(-50%, -50%); } .pop-header { width: 350px; height: 27px; background-color: #689AE5; margin-bottom: 14px; } #br_header { font-weight: bold; font-size: 22px; color: white; text-align: center; border-bottom: 2.5px solid black; } .info { margin-left: 18px; font-size: 22px; margin-top: 28px; }</style>
+    </head>
+    <body>
+        <div class="screen">
+            <div class="header">
+                Welcome to Laundry@CU 
+</div>
+            <div class="header-text">
+                You have the following machines in use:
+</div>
+            <div>
+                <div class="frame">
+                    <div class="pop-header">
+                        <div id="br_header">
+                            Washer 2 
+
+                            <span style="color: red;"> (Cancelled)</span>
+                            <span class="close" style="float:right; color: black;">|<a href="feed.html"> &nbsp;X&nbsp;</a> </span>
+                        </div>
+                    </div>
+                    <div class="info">
+                        Reserved for: Wednesday 12/14/20 @ 6:30pm
+</div>
+                    <div class="info">
+                        Your reservation has timed out. 
+</div>
+                </div>
+                <div class="box">
+                    <div class="box-header" style="background-color: rgba(19, 220, 39, 0.31);">
+                        In Use
+</div>
+                    <div class="machine">
+                        <b>Dryer 5</b> 
+                        <br> 
+                    </div>
+                </div>
+                <div class="box"> 
+                    <div class="box-header" style="background-color: rgba(196, 196, 196, 0.5);">
+                        Completed 
+</div>
+                    <div class="machine">
+                        <b>Washer 3</b> 
+                        <br> 
+                    </div>
+                    <div class="machine">
+                        <b>Washer 2 <span style="color: red; text-decoration: underline;"> (Cancelled)</span></b> 
+                        <br> 
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-header" style="background-color: rgba(151, 213, 255, 0.73);">
+                        Reserved     
+</div>
+                    <div class="no-res">
+                        <b>No Upcoming Reservations</b>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-bar">
+                <a href="feed.html"> <div class="nav-tab nav-tab-selected">
+                        <img id="feed" src="images/bell.jpg" alt="bell"/>
+                        <div class="caption">Feed</div>
+                    </div> </a>
+                <a href="laundry-main.html"> <div class="nav-tab">
+                        <img id="laundry-view" src="images/laundry.jpg" alt="laundry"/>
+                        <div class="caption">Laundry</div>
+                    </div> </a>
+                <a href="storage.html"> <div class="nav-tab">
+                        <img id="storage-view" src="images/user.jpg" alt="storage"/>
+                        <div class="caption">Storage</div>
+                    </div> </a>
+            </div>
+        </div>
+    </body>
+</html>
