@@ -1,20 +1,37 @@
 <html>
 <head>
+    <meta name="author for HTML/CSS for broken report" content="Bennet Brown">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <!-- <script src="laundryview.js"></script> -->
     <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="broken_report.css">
     <script>
         function machine_select() {
         $('.machine').on('click', function() {
         $('.machine').not(this).removeClass('selectedmachine');
         $(this).addClass('selectedmachine');
         var val = $(this).attr('id');
-
-
         }); 
-        
-
     };    
+    function report_problem() {
+        $('.secbutton').on('click', function() {
+        $('.frame').removeClass('hidden');
+        });
+    };
+    function cancel_report() {
+        $('#canc').on('click', function() {
+        $('.frame').addClass('hidden');
+        }); 
+    };
+    function submit_report() {
+        $('#sub').on('click', function() {
+        $('.frame').addClass('hidden');
+        }); 
+    };
+
+    machine_select();
+    report_problem();
+    cancel_report();
+    submit_report();
     </script>
 </head>
 <style>
@@ -177,6 +194,9 @@
         padding:5px;
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.25), 0 6px 20px 0 rgba(0,0,0,0.19);
     }
+    .hidden{
+        visibility:hidden; 
+    }
 
 
 </style>
@@ -248,7 +268,7 @@
             <button class ="button primarybutton" onclick="location.href='reservation_page.html';">Reservations</button></div>
             </div>
             
-        <div class = "buttonposition"><button class ="button secbutton" onclick="location.href='broken_report.html';">Report Problem</button></div>
+        <div class = "buttonposition"><button class ="button secbutton" onclick="report_problem()">Report Problem</button></div>
         <div class="nav-bar">
             <a href="feed.html">  <div class="nav-tab">
                     <img id="feed" src="images/bell.svg" alt="bell"/>
@@ -264,6 +284,48 @@
                 </div> </a>
         </div>
         </div>
+        </div>
+        <div class="frame hidden">
+            <div class="card">
+             
+                 <div id="br_header">
+                     Broken Machine Report
+                 </div>
+                 
+             
+             <div class="select_machine">
+             <span>
+                     <select name="machines" id="machines">
+                       <option value="machine">Machine</option>
+                       <option value="dryer">Dryer</option>
+                       <option value="washer">Washer</option>
+                     </select>		 
+             </span>
+             <span>
+                     <select name="numbers" id="numbers">
+                       <option value="#">#</option>
+                       <option value="one">1</option>
+                       <option value="two">2</option>
+                       <option value="three">3</option>
+                       <option value="four">4</option>
+                     </select>
+             </span>
+             </div>
+             <div class="notes">
+                 Notes:
+             </div>
+             <div class="form_section">
+                 <form >
+                     <input type="text" name="details" id="details" placeholder="Describe Problem"><br>
+                     <div id="buttons">
+                         <input type="submit" value="Cancel" id="canc">
+                     <input type="submit" value="Submit" id="sub">
+                     </div>
+                     
+                   </form>
+             </div>
+            </div>
+            
         </div>
 
         
