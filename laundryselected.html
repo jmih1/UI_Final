@@ -1,0 +1,246 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- <script src="laundryview.js"></script> -->
+    <link rel="stylesheet" href="header.css">
+    <script>
+        function machine_select() {
+        $('.machine').on('click', function() {
+        $('.machine').not(this).removeClass('selectedmachine');
+        $(this).addClass('selectedmachine');
+        var val = $(this).attr('id');
+        }); 
+        
+
+    };    
+    </script>
+</head>
+<style>
+    body {
+  font-family: 'Roboto';
+}
+    #fp {
+        font-size: 13px;
+        text-align: center;
+        
+    }
+    #leg {
+        position: relative;
+        text-align: left;
+        left: 21px;
+        top: -380px;
+    }
+    #broken {
+        cursor: pointer;
+        position: relative;
+        font-size: 35px;
+        font-weight: 300;
+        left: -3px;
+        top: -70px;
+
+    }
+    iphone-frame {
+    border: 3px solid black;
+    position: relative;
+    height: 90%;
+    margin: auto;
+    width: 40%;
+    padding: 10px;
+    }
+    .dropdown {
+    margin: auto;
+    display: inline;
+    width: 50%;
+    }
+    #seldorm {
+        width: 50%;
+        font-size: 20px;
+        margin-left: 95px; 
+        margin-top: 5px; 
+        margin-bottom: -10px;
+    }
+    .screen{
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        width: 375px;
+        height: 667px;
+        border: 3px solid black;
+        background-color:#fff;   
+    }
+    .timeselect{
+        position: relative;
+        width: 299px;
+        height: 65px;
+        left: 22px;
+    }
+    #rightarr{
+        border-radius: 50%;
+    }
+    .floorplan {
+        position: relative;
+        width: 334px;
+        height: 233px;
+        left: 21px;
+        top: 50px;
+        border: 1px solid black;
+      }
+    .machine{
+        position: relative;
+        background-color:#fff;  
+        width: 50px;
+        height: 39.32px;
+        border: 1px solid black;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 39.32px;  
+        cursor: pointer;
+    }
+
+    .selectedmachine{
+        background-color: #B6E2FF;
+        width: 52px;
+        height: 41px;
+        border: 2px dashed #000000;
+        box-sizing: border-box;
+    }
+    #l1,#l2,#l3,#l4{
+        left: 20px;
+        top: -40px;
+    }
+    
+    #ra1,#ra2,#ra3{
+        left: 219px;
+        top: -143.5px;
+       
+    }
+    #rb1,#rb2,#rb3,#rb4,#rb5{
+        left: 271px;
+        top: -350px;
+    }
+    #l2,#l3,#ra1,#ra3,#rb1,#rb3{
+        background-color:#979696;   
+    }
+    .status{
+        position: relative;
+        width: 325px;
+        height: 116px;
+        left: 0px;
+        top: -365px;
+        border: 1px solid black;
+        background-color:#fff;   
+        align-items: center;
+        justify-content: center;
+    }
+    .primarybutton {
+        position: relative;
+        background: #0A69AE;
+        color:#fff;
+        border-radius: 3px;
+        border: none;
+        text-align: center;
+        display: inline-block;
+        font-size: 15px;
+        line-height: 18px;
+        cursor: pointer;
+        left: 100px;
+        top: -10px;
+        align-items: center;
+        width: 160px;
+        height: 35px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.25), 0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+    .secbutton {
+        position: relative;
+        background: #E7E3E3;
+        border-radius: 3px;
+        border: none;
+        text-align: center;
+        display: inline-block;
+        font-size: 15px;
+        line-height: 18px;
+        cursor: pointer;
+        left: 220px;
+        top: -350px;
+        padding:5px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.25), 0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+
+
+</style>
+<body>
+    <!-- <div class="iphone-frame"> -->
+        
+    <div class="screen">
+        <div class="header">Laundry@CU </div>
+        <div class="timeselect">
+        <h1><u>View At</u></h1> 
+        
+        <div class = dropdown>
+            <select id="hr">
+              <option value="" selected disabled hidden> Hour</option>
+              <option value="Hour7">7</option>
+              <option value="Hour8">8</option>
+              <option value="Hour9">9</option>
+            </select> 
+        </div>:
+        <div class = dropdown>
+            <select id="min">
+              <option value="" selected disabled hidden> Minutes</option>
+              <option value="Min00">00</option>
+              <option value="Min15">15</option>
+              <option value="Min30">30</option>
+              <option value="Min45">45</option>
+            </select> 
+        </div>
+        <button id = "rightarr">&#10095;</button>
+        </div> <!--closing timeselect  -->
+        <div class = "floorplan">
+            <div class = "container">
+            <div class = dropdown>
+                <select id="seldorm">
+                  <option value="" selected disabled hidden> Your Dorm </option>
+                  <option value="Broadway">Broadway</option>
+                  <option value="East Campus">East Campus</option>
+                  <option value="Hogan">Hogan</option>
+                  <option value="Ruggles">Ruggles</option>
+                  <option value="Watt"> Watt </option>
+                </select> 
+            </div>
+            
+            
+            <p id = "fp">Live View <br>(Updated 1 min ago)</p>
+            <div class ="machine"id="l1" onclick="machine_select()">W1</div>
+            <div class ="machine"id="l2" onclick="machine_select()">W2</div>
+            <div class ="machine"id="l3" onclick="machine_select()">W3</div>
+            <div class ="machine"id="l4" onclick="machine_select()">W4</div>
+            <div class ="machine"id="ra1" onclick="machine_select()">D1</div>
+            <div class ="machine"id="ra2" onclick="machine_select()">D2</div>
+            <div class ="machine"id="ra3" onclick="machine_select()">D3<p id ="broken">X</p></div>
+            <div class ="machine"id="rb1" onclick="machine_select()">W5</div>
+            <div class ="machine"id="rb2" onclick="machine_select()">W6</div>
+            <div class ="machine"id="rb3" onclick="machine_select()">D4</div>
+            <div class ="machine"id="rb4" onclick="machine_select()">D5</div>
+            <div class ="machine"id="rb5" onclick="machine_select()">D6</div>
+            
+            <p id ="leg">X Broken</p>
+            <div class = "status"><p >Washing Machine 1 <img src="./images/machine-wash.png" display=inline><br>Status:Available</p>
+            <button class ="button primarybutton">Reservations</button></div>
+            </div>
+            
+        <div class = "buttonposition"><button class ="button secbutton">Report Problem</button></div>
+
+        </div>
+        </div>
+
+        
+    </div>
+    <!-- </div> -->
+    <!-- Attributes Part -->
+    <div>Icons made by <a href="https://www.flaticon.com/authors/becris" title="Becris">Becris</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    <div>Icons made by <a href="https://www.flaticon.com/authors/catalin-fertu" title="Catalin Fertu">Catalin Fertu</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    <div>Icons made by <a href="https://www.flaticon.com/authors/bqlqn" title="bqlqn">bqlqn</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
+</body>
+</html>
